@@ -1,0 +1,35 @@
+<% include ./partials/header%>
+<div class="ui main text container">
+  <div class="ui huge header">
+    <h1  class="h1">Welcome to blog website</h1>
+  </div>
+  <div class="ui top attached segment">
+    <div class="ui divided item">
+      <%blogs.forEach(function(blog){%>
+        <div class="item">
+          <div class="image">
+            <img   class="ui centered rounded image" src="<%=blog.image%>" alt="">
+          </div>
+          <div class="content">
+            <a href="/blogs/<%=blog.id%>"><h2><%=blog.title%></h2></a>
+            <div class="description">
+                <% if (typeof blog.body == 'undefined' ) { %>
+                  <p> no content</p>
+              <% } else { %>
+              <p> <%= blog.body.substring(0, 20) %>...</p>
+                
+               <% } %>
+              
+              <span><%=blog.created%></span>
+            </div>
+            <div class="extra">
+             <a href="/blogs/<%=blog._id%>"  class="ui purple  basic button" id="re">Read More</a>
+            </div>
+          </div>
+        </div>
+        <%})%>
+    </div>
+  </div>
+</div>
+
+<% include ./partials/footer%>
