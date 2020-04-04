@@ -13,7 +13,7 @@ const express               =    require("express"),
 
 
     
-      mongoose.connect('mongodb+srv://iFlameing:Alok9988@graphql-rvmhm.mongodb.net/test?retryWrites=true&w=majority', {
+      mongoose.connect('mongodb+srv://enter your password and file@graphql-rvmhm.mongodb.net/test?retryWrites=true&w=majority', {
         keepAlive: true,
         reconnectTries: Number.MAX_VALUE,
         useNewUrlParser: true
